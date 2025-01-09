@@ -2,10 +2,12 @@ import './Header.scss'
 
 import {Link, NavLink} from 'react-router-dom'
 import search from '../../assets/svg/search.svg'
-import heart from '../../assets/svg/heart.svg'
-import shop from '../../assets/svg/shop.svg'
+// import { GoHeart } from "react-icons/go";
+// import { RiShoppingCart2Line } from "react-icons/ri";
+import { useTranslation } from 'react-i18next';
 
 export default function Header() {
+  const { t } = useTranslation();
   return (
     <header className="header">
       <div className="top-header">
@@ -40,35 +42,26 @@ export default function Header() {
           <h2>Exclusive</h2>
           <ul>
             <li>
-              <NavLink
-                to="/"
-                className={({isActive}) => (isActive ? 'Link active' : 'Link')}
-              >
-                Home
+              <NavLink to="/" className={({isActive}) => (isActive ? 'Link active' : 'Link')}>
+                {t("home")}
               </NavLink>
             </li>
             <li>
               <NavLink
-                to="/contact"
-                className={({isActive}) => (isActive ? 'Link active' : 'Link')}
-              >
-                Contact
+                to="/contact" className={({isActive}) => (isActive ? 'Link active' : 'Link')}>
+                {t("contact")}
               </NavLink>
             </li>
             <li>
               <NavLink
-                to="about"
-                className={({isActive}) => (isActive ? 'Link active' : 'Link')}
-              >
-                About
+                to="/about" className={({isActive}) => (isActive ? 'Link active' : 'Link')}>
+                {t("about")}
               </NavLink>
             </li>
             <li>
               <NavLink
-                to="/register"
-                className={({isActive}) => (isActive ? 'Link active' : 'Link')}
-              >
-                Sign Up
+                to="/register" className={({isActive}) => (isActive ? 'Link active' : 'Link')}>
+                {t("register")}
               </NavLink>
             </li>
           </ul>
@@ -80,8 +73,8 @@ export default function Header() {
             <img src={search} alt=""/>
           </div>
           <div className="icons">
-            <img src={heart} alt=""/>
-            <img src={shop} alt=""/>
+            {/*<GoHeart size={24} style={{marginTop: '10px'}} />*/}
+            {/*<RiShoppingCart2Line size={24} style={{marginTop: '10px'}} />*/}
           </div>
         </div>
       </div>

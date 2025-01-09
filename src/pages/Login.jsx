@@ -53,7 +53,7 @@ export default function Login() {
                 fontWeight: 'inherit',
                 borderRadius: '4px'
               }}>Log in</button>
-              <h4 style={{color: '#DB4444', fontWeight: 'normal', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>Forget Password?</h4>
+              <h4 style={{color: '#DB4444', fontWeight: 'normal', display: 'flex', justifyContent: 'center', alignItems: 'center', fontSize: '16px', marginBottom: '0px'}}>Forget Password?</h4>
 
 
             </div>

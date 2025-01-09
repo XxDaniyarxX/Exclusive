@@ -1,6 +1,5 @@
 import phone from '../assets/img/img_4.png'
-import google from '../assets/svg/google.svg'
-import {Link} from 'react-router-dom'
+
 
 
 export default function Login() {
@@ -54,7 +53,7 @@ export default function Login() {
                 fontWeight: 'inherit',
                 borderRadius: '4px'
               }}>Log in</button>
-              <h4 style={{color: '#DB4444', fontWeight: 'normal', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>Forget Password?</h4>
+              <h4 style={{color: '#DB4444', fontWeight: 'normal', display: 'flex', justifyContent: 'center', alignItems: 'center', fontSize: '16px'}}>Forget Password?</h4>
 
 
             </div>
