@@ -25,9 +25,9 @@ export default function Home() {
       <Banner/>
       <div className='products'>
         {
-          products.map((item) => (
-            <Product key={item.id} product={item}/>
-          ))
+          // products.map((item) => (
+          //   <Product key={item.id} product={item}/>
+          // ))
         }
       </div>
       {/*<Product />*/}

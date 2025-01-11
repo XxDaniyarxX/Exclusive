@@ -7,7 +7,14 @@ import { RiShoppingCart2Line } from "react-icons/ri";
 import { useTranslation } from 'react-i18next';
 
 export default function Header() {
-  const { t } = useTranslation();
+  const { t ,i18n} = useTranslation();
+  function hundlechangelng(e) {
+    let lng = e?.target.value
+
+    i18n.changeLanguage(lng)
+  }
+
+  hundlechangelng()
   return (
     <header className="header">
       <div className="top-header">
@@ -20,7 +27,7 @@ export default function Header() {
             }}>ShopNow</Link></li>
           <div>
             <li>English</li>
-            <select style={{
+            <select onChange={hundlechangelng} style={{
               marginLeft: '1px',
               outline: 'none',
               border: 'none',

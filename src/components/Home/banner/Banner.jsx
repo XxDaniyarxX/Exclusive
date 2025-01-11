@@ -43,14 +43,14 @@ export default function Banner() {
           </Carousel.Item>
           <Carousel.Item>
             {/* <ExampleCarouselImage text="Second slide" /> */}
-            <img src={banner}/>
+            <img width={892} height={344} src='https://avatars.mds.yandex.net/i?id=441f970a6d592276e64a5c59bf7a69b8a2870374-3753631-images-thumbs&n=13'/>
             <Carousel.Caption>
 
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
             {/* <ExampleCarouselImage text="Third slide" /> */}
-            <img src={banner} />
+            <img width={892} height={344} src='https://www.ferra.ru/imgs/2024/05/08/05/6460496/c2150453d059e8999c5f0b211ce334f7c869147c.jpg' />
             <Carousel.Caption>
 
             </Carousel.Caption>

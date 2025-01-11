@@ -2,12 +2,18 @@ import './Header.scss'
 
 import {Link, NavLink} from 'react-router-dom'
 import search from '../../assets/svg/search.svg'
-// import { GoHeart } from "react-icons/go";
-// import { RiShoppingCart2Line } from "react-icons/ri";
+import { GoHeart } from "react-icons/go";
+import { RiShoppingCart2Line } from "react-icons/ri";
 import { useTranslation } from 'react-i18next';
 
 export default function Header() {
-  const { t } = useTranslation();
+  const { t ,i18n} = useTranslation();
+  function hundlechangelng(e) {
+    let lng = e?.target.value
+
+    i18n.changeLanguage(lng)
+  }
+  hundlechangelng()
   return (
     <header className="header">
       <div className="top-header">
@@ -20,7 +26,7 @@ export default function Header() {
             }}>ShopNow</Link></li>
           <div>
             <li>English</li>
-            <select style={{
+            <select onChange={hundlechangelng} style={{
               marginLeft: '1px',
               outline: 'none',
               border: 'none',
@@ -73,8 +79,8 @@ export default function Header() {
             <img src={search} alt=""/>
           </div>
           <div className="icons">
-            {/*<GoHeart size={24} style={{marginTop: '10px'}} />*/}
-            {/*<RiShoppingCart2Line size={24} style={{marginTop: '10px'}} />*/}
+            <GoHeart size={24} style={{marginTop: '10px'}} />
+            <RiShoppingCart2Line size={24} style={{marginTop: '10px'}} />
           </div>
         </div>
       </div>
