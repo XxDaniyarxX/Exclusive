@@ -3,17 +3,17 @@ import { FaRegHeart } from "react-icons/fa";
 import { FaRegEye } from "react-icons/fa";
 import './Product.scss'
 import Star from '../../assets/svg/Star.jsx'
+import BlackButton from '../../utils/button/BlackButton.jsx'
 
 function Product({product}) {
   return (
+    <>
     <div className='product'>
       <div className="product-container">
         <div className="image">
           <img src={product.thumbnail} alt="" />
         </div>
-        <button className="adding">
-          Add To Cart
-        </button>
+       <BlackButton />
       </div>
       {/*<//div className="discount" style={{*/}
       {/*  //display: `${product.discount? "block" : "none"}`*/}
@@ -44,6 +44,7 @@ function Product({product}) {
         <span>{product.rating}</span>
       </div>
     </div>
+    </>
   )
 }
 

@@ -10,7 +10,7 @@ import starminus from '../../../assets/svg/star--.svg'
 import tv from '../../../assets/img/img_8.png'
 import stul from '../../../assets/img/img_9.png'
 import starpol from '../../../assets/svg/starpol.svg'
-
+import Button from '../../../utils/button/Button.jsx'
 
 export default function FlashSales() {
   return (
@@ -244,7 +244,7 @@ export default function FlashSales() {
         </div>
       </nav>
     </div>
-      <button style={{width: '234px', height: '56px', backgroundColor: '#DB4444', borderRadius: '4px', border: 'none', color: 'white', marginTop: '80px', marginLeft: '610px'}}>View All Products</button>
+    <Button/>
       <div className='container' style={{height: '0.5px', backgroundColor: 'black', marginTop: '60px'}}></div>
     </div>
   )

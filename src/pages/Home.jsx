@@ -3,6 +3,8 @@ import Banner from '../components/Home/banner/Banner.jsx'
 import Product from '../components/product/Product.jsx'
 import {useState, useEffect} from 'react'
 import axios from 'axios'
+import FlashSales from '../components/Home/Todays/Flash-sales.jsx'
+import Button from '../utils/button/Button.jsx'
 
 export default function Home() {
   const [products, setProducts] = useState([])
@@ -25,13 +27,14 @@ export default function Home() {
       <Banner/>
       <div className='products'>
         {
-          products.map((item) => (
-            <Product key={item.id} product={item}/>
+          products.slice(0, 4).map((product) => (
+            <Product key={product.id} product={product}/>
           ))
         }
       </div>
-      {/*<Product />*/}
-      {/*<FlashSales/>*/}
+      <Button />  
+      {/* <Product /> */}
+      {/* <FlashSales/> */}
       {/*<BrowseByCategory/>*/}
       {/*<BestSellingProducts/>*/}
       {/*<ExploreOurProducts />*/}

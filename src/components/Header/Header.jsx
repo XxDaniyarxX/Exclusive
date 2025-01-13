@@ -8,11 +8,11 @@ import { useTranslation } from 'react-i18next';
 
 export default function Header() {
   const { t ,i18n} = useTranslation();
-  function hundlechangelng(e) {
+  function hundlechangelng(e) { 
     let lng = e?.target.value
 
     i18n.changeLanguage(lng)
-  }
+  } 
 
   hundlechangelng()
   return (

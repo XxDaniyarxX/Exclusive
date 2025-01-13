@@ -1,6 +1,7 @@
 import phone from '../assets/img/img_4.png'
 import google from '../assets/svg/google.svg'
 import {Link} from 'react-router-dom'
+import Input from '../utils/input/Input'
 export default function Register() {
   return (
     <>
@@ -12,13 +13,13 @@ export default function Register() {
             <div style={{width: '371px', height: '400px', marginTop: '47px',}}>
                  <main style={{width: '370px', height: '176px'}}>
                       <div style={{width: '370px', height: '32px', borderBottom: '1px solid black', opacity: "50%"}}>
-                        <input placeholder='Name' style={{outline: 'none', border: 'none'}} type="text"/>
+                        <Input placeholder='Name'/>
                        </div>
                        <div style={{marginTop: '40px' ,width: '370px', height: '32px', borderBottom: '1px solid black', opacity: "50%"}}>
-                        <input placeholder='Email or Phone Number' style={{outline: 'none', border: 'none'}} type="text"/>
+                        <Input placeholder='Email or Phone Number'/>
                        </div>
                        <div style={{marginTop: '40px' ,width: '370px', height: '32px', borderBottom: '1px solid black', opacity: "50%"}}>
-                        <input placeholder='Password' style={{outline: 'none', border: 'none'}} type="text"/>
+                        <Input placeholder='Password'/>
                        </div>
 
 

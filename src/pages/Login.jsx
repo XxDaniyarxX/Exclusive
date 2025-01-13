@@ -1,5 +1,5 @@
 import phone from '../assets/img/img_4.png'
-
+import Input from '../utils/input/Input.jsx'
 
 
 export default function Login() {
@@ -26,8 +26,7 @@ export default function Login() {
                 borderBottom: '1px solid black',
                 opacity: "50%"
               }}>
-                <input placeholder='Email or Phone Number'
-                       style={{outline: 'none', border: 'none'}} type="text"/>
+               <Input placeholder='Email or Phone Number' />
               </div>
               <div style={{
                 marginTop: '40px',
@@ -36,8 +35,7 @@ export default function Login() {
                 borderBottom: '1px solid black',
                 opacity: "50%"
               }}>
-                <input placeholder='Password'
-                       style={{outline: 'none', border: 'none'}} type="text"/>
+                <Input placeholder='Password' />
               </div>
 
 
