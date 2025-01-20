@@ -5,13 +5,25 @@ import search from '../../assets/svg/search.svg'
 import { GoHeart } from "react-icons/go";
 import { RiShoppingCart2Line } from "react-icons/ri";
 import { useTranslation } from 'react-i18next';
+import userImg from '../../assets/img/user.png'
+import { useContext } from 'react';
+import { UserContext } from '../../UserContext.jsx';
+import { useNavigate } from 'react-router-dom';
 
 export default function Header() {
   const { t ,i18n} = useTranslation();
+  const {user} = useContext(UserContext)
+  const navigate = useNavigate()
+
+
   function hundlechangelng(e) { 
     let lng = e?.target.value
 
     i18n.changeLanguage(lng)
+  } 
+  
+  const hundleProFile = () => {
+    navigate('/account')
   } 
 
   hundlechangelng()
@@ -45,7 +57,7 @@ export default function Header() {
 
 
       <div className="main-header container">
-        <div className="header-left">
+        <div className={`header-left ${user ? 'with-user' : ''}`}>
           <h2>Exclusive</h2>
           <ul>
             <li>
@@ -80,9 +92,16 @@ export default function Header() {
             <img src={search} alt=""/>
           </div>
           <div className="icons">
+            <Link to={'/wishlist'} style={{textDecoration: 'none', color: 'black'}}>
             <GoHeart size={24} style={{marginTop: '10px'}} />
+            </Link>
             <RiShoppingCart2Line size={24} style={{marginTop: '10px'}} />
-          </div>
+            {user && (
+                <img src={userImg} alt="" onClick={hundleProFile} className='user-img' />
+              )
+            }
+
+          </div>  
         </div>
       </div>
       <div style={{

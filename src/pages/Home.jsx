@@ -1,38 +1,37 @@
 import './styles/Home.scss'
 import Banner from '../components/Home/banner/Banner.jsx'
 import Product from '../components/product/Product.jsx'
-import {useState, useEffect} from 'react'
+import { useEffect } from 'react'
 import axios from 'axios'
 import FlashSales from '../components/Home/Todays/Flash-sales.jsx'
 import Button from '../utils/button/Button.jsx'
-
+import { useDispatch, useSelector } from 'react-redux'
+import { HomeFetch } from '../Redux/HomeProduct/HomeProduct.js'
 export default function Home() {
-  const [products, setProducts] = useState([])
-  async function getProducts() {
-    try {
-      const response = await axios.get('https://dummyjson.com/products')
-      setProducts(response.data.products)
-      console.log(response.data.products)
-    } catch (error) {
-      console.log(error)
-    }
-  }
+  const dispath = useDispatch()
+
+  const { loading, home, error } = useSelector((state) => state.HomeFetch)
 
   useEffect(() => {
-    getProducts()
-  }, [])
+    dispath(HomeFetch())
+  }, [
+    dispath
+  ])
+  console.log(home);
+
+
   return (
     <div>
 
-      <Banner/>
+      <Banner />
       <div className='products'>
         {
-          products.slice(0, 4).map((product) => (
-            <Product key={product.id} product={product}/>
+          home.slice(0, 4).map((product) => (
+            <Product key={product.id} product={product} />
           ))
         }
       </div>
-      <Button />  
+      <Button />
       {/* <Product /> */}
       {/* <FlashSales/> */}
       {/*<BrowseByCategory/>*/}

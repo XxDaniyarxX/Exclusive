@@ -53,6 +53,7 @@ $black-color: #000;
     padding-top: 45px;
     display: flex;
     margin-right: 40px;
+ 
     ul {
       display: flex;
       list-style: none;
@@ -82,6 +83,12 @@ $black-color: #000;
       border-bottom: 1px solid black;
     }
 
+  }
+  .header-left.with-user {
+    gap: 83px;
+  }   
+  .user-img {
+    margin-top: 5px;
   }
 
   .header-right {

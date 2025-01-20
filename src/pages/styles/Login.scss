@@ -1,0 +1,93 @@
+.login-container {
+    width: 1307px;
+    height: 781px;
+    gap: 129px;
+    padding-top: 60px;
+    margin-bottom: 140px;
+    display: flex;
+  }
+  
+  .login-image {
+    width: 805px;
+    height: 781px;
+  }
+  
+  .login-form-container {
+    width: 371px;
+    height: 530px;
+    margin-top: 125px;
+  
+    .login-title {
+      font-size: 36px;
+      font-weight: unset;
+    }
+  
+    .login-subtitle {
+      font-weight: normal;
+      padding-top: 24px;
+    }
+  
+    .login-form {
+      width: 371px;
+      height: 400px;
+      margin-top: 47px;
+  
+      .login-input-group {
+        width: 370px;
+        height: 176px;
+  
+        .login-input-field {
+          width: 370px;
+          height: 32px;
+          border-bottom: 1px solid black;
+          opacity: 50%;
+          margin-top: 40px;
+  
+          &:first-child {
+            margin-top: 0;
+          }
+        }
+        input {
+          width: 100%;
+          border: none;
+          outline: none;
+          background: transparent;
+        }
+      }
+    }
+  
+    .login-buttons {
+      width: 371px;
+      gap: 87px;
+      height: 56px;
+      margin-top: 40px;
+      display: flex;
+  
+      .login-button {
+        width: 143px;
+        height: 56px;
+        background-color: #db4444;
+        color: white;
+        border: none;
+        font-weight: inherit;
+        border-radius: 4px;
+      }
+      h4 {
+        font-size: 14px;
+        color: #db4444;
+        padding-right: 15px;
+        padding-top: 15px;
+      }
+  
+      .forget-password {
+        color: #db4444;
+        font-weight: normal;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+        margin-bottom: 0;
+      }
+    }
+  }
+  

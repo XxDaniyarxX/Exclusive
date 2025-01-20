@@ -1,0 +1,28 @@
+.contact-text {
+    width: 150px;
+    height: 21px;
+    margin: 50px 150px;
+    .text-1-1 { 
+        font-size: 14px;
+        font-weight: 400;
+        color: gray;
+        span {
+            color: black;
+            font-size: 14px;
+            font-weight: 400;
+        }
+    }
+}
+.contact-container {
+    display: flex;
+    gap: 30px;
+    margin: 80px 0px;
+    width: 1170px;
+    height: 457px;
+    border-radius: 1px solid black;
+    .contact-form {
+        width: 340px;
+        height: 457px;
+        border-radius: 4px;
+    }
+}

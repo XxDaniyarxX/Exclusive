@@ -5,7 +5,12 @@ import { createBrowserRouter } from 'react-router-dom';
 import Register from './pages/Register.jsx';
 import Login from './pages/Login.jsx';
 import NotFound from './pages/NotFound.jsx';
-import Contact from './pages/Contact.jsx' // Страница для 404
+import Contact from './pages/Contact.jsx'
+import Account from './pages/Account.jsx'
+import Wishlist from './pages/Wishlist.jsx';
+import Service from './pages/Service.jsx';
+import Practic from './pages/Practic.jsx';
+import Smartphone from './pages/Smartphone.jsx';
 
 export const myRouter = createBrowserRouter([
   {
@@ -35,6 +40,26 @@ export const myRouter = createBrowserRouter([
       {
         path: '*',
         element: <NotFound />,
+      },
+      {
+        path: 'account',
+        element: <Account />
+      },
+      {
+        path: 'wishlist',
+        element: <Wishlist />
+      },
+      {
+        path: 'service',
+        element: <Service />
+      },
+      {
+        path: 'practic',
+        element: <Practic />
+      },
+      {
+        path: 'smartphone',
+        element: <Smartphone />
       },
     ],
   },
