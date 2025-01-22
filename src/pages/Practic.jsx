@@ -11,6 +11,7 @@ export default function Practic() {
     }, [dispath])
 
     console.log(products)
+
     if (loading) return <Loading />
     if (error) return <h1>Error: {error}</h1>
     return (

@@ -95,7 +95,9 @@ export default function Header() {
             <Link to={'/wishlist'} style={{textDecoration: 'none', color: 'black'}}>
             <GoHeart size={24} style={{marginTop: '10px'}} />
             </Link>
-            <RiShoppingCart2Line size={24} style={{marginTop: '10px'}} />
+          <Link to={'cart'} style={{color: 'black'}}>
+          <RiShoppingCart2Line size={24} style={{marginTop: '10px'}} />
+          </Link>
             {user && (
                 <img src={userImg} alt="" onClick={hundleProFile} className='user-img' />
               )

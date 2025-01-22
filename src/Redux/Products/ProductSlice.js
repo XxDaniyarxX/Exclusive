@@ -7,7 +7,7 @@ export const getProductByCategory = createAsyncThunk(
       try {
          const res = await axios.get(`https://dummyjson.com/products/category/${category}`);
 
-         return res.data
+         return res.data.products
 
       } catch (error) {
          return thunkAPI.rejectWithValue(error.resonse.data.message || error.message);
@@ -19,26 +19,26 @@ const productSlice = createSlice({
    name: "products",
    initialState: {
       loading: false,
-      products: [],
+      categories: [],
       error: null
    },
    reducers: {},
    extraReducers: (builder) => {
-      builder
-         .addCase(getProductByCategory.pending, (state) => {
-            state.loading = true
-            state.error = null
-         })
-         .addCase(getProductByCategory.fulfilled, (state, action) => {
-            state.loading = false
-            state.products = action.payload
-         })
-         .addCase(getProductByCategory.rejected, (state) => {
-            state.loading = false
-            state.error = null
-         })
-
+      builder 
+       .addCase(getProductByCategory.pending, (state) => {
+         state.loading = true;
+         state.error = false;
+       })
+       .addCase(getProductByCategory.fulfilled, (state, action) => {
+         state.loading = false;
+         state.categories = action.payload
+       })
+       .addCase(getProductByCategory.rejected, (state, action) => {
+         state.loading = false;
+         state.error = action.payload
+       })
    }
+     
 })
 
 export default productSlice.reducer

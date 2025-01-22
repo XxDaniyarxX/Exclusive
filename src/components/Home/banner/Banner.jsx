@@ -4,27 +4,28 @@ import banner from '../../../assets/img/img_5.png';
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { category } from '../../../Redux/Category/Category';
+import { getProductByCategory } from '../../../Redux/Products/ProductSlice';
 export default function Banner() {
-   const dispath = useDispatch()
+  const dispath = useDispatch()
 
-   const {loading, categories, error} = useSelector((state) => state.Categorylist)
-   
-   useEffect(() => {
-     dispath(category())  
-   }, [
+  const { loading, categories, error } = useSelector((state) => state.Categorylist)
+
+  useEffect(() => {
+    dispath(category())
+  }, [
     dispath
-   ])
-   console.log(categories);
-   
-    
+  ])
+  console.log(categories);
+
+
   return (
     <div className='banner container'>
       <div className="banner-left">
         <ul>
           {
-                categories.slice(0, 9).map((category, id) => (
-              <li key={id}>
-                {category}
+            categories.map((item, id) => (
+              <li onClick={() => dispath( getProductByCategory(item) )} key={id}>
+                {item}
               </li>
             ))
           }

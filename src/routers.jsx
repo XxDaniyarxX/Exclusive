@@ -11,7 +11,7 @@ import Wishlist from './pages/Wishlist.jsx';
 import Service from './pages/Service.jsx';
 import Practic from './pages/Practic.jsx';
 import Smartphone from './pages/Smartphone.jsx';
-
+import Cart from './pages/Cart.jsx'
 export const myRouter = createBrowserRouter([
   {
     path: '/',
@@ -60,6 +60,10 @@ export const myRouter = createBrowserRouter([
       {
         path: 'smartphone',
         element: <Smartphone />
+      },
+      {
+        path: 'cart',
+        element: <Cart />
       },
     ],
   },

@@ -6,6 +6,7 @@ import baykotFetch from './Baykot/baykotSlice';
 import smartphoneReducer from './Smartphones/SmartphoneSlice';
 import Category from './Category/Category'
 import HomeFetch from './HomeProduct/HomeProduct';
+import ProductReducer from './Products/ProductSlice'
 const myStore = configureStore({
     reducer: {
         check: CountReducer,
@@ -14,7 +15,8 @@ const myStore = configureStore({
         baykot: baykotFetch,
         smartphone: smartphoneReducer,
         Categorylist: Category,
-        HomeFetch: HomeFetch
+        HomeFetch: HomeFetch,
+        products: ProductReducer
         
     },
 });
