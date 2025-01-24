@@ -159,7 +159,7 @@
         gap: 60px;
         flex-direction: column;
 
-       
+
 
         .wishlist__bottom__left {
             width: 1170px;
@@ -167,6 +167,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+
             .wishlist__bottom__left__title {
                 display: flex;
                 gap: 16px;
@@ -200,35 +201,37 @@
                 }
             }
         }
+
         .whishlist__bottom__right {
             width: 1170px;
             height: 350px;
             display: flex;
             gap: 30px;
+
             .wishlist__items-down__item {
                 width: 270px;
                 height: 322px;
                 display: flex;
                 gap: 14px;
                 flex-direction: column;
-    
+
                 .wishlist__items-down__item__img {
                     width: 270px;
                     height: 250px;
                     background-color: #F5F5F5;
-    
+
                     .img-1-1 {
                         position: absolute;
                         margin-left: 40px;
                         margin-top: 20px;
                     }
-    
+
                     .img-1-2 {
                         position: absolute;
                         margin-left: 225px;
                         margin-top: 10px;
                     }
-    
+
                     .btn-1-1 {
                         width: 55px;
                         height: 26px;
@@ -240,6 +243,7 @@
                         font-size: 12px;
                         color: #FaFaFa;
                     }
+
                     .btn-1-2 {
                         width: 56px;
                         height: 26px;
@@ -252,32 +256,33 @@
                         font-size: 12px;
                         font-weight: 400;
                     }
-    
+
                     h4 {
                         font-size: 16px;
                         font-weight: 500;
                     }
-    
+
                     .btn-wishlist {
                         display: none;
                     }
                 }
-    
+
                 .wishlist__items-down__item__img:hover {
                     width: 270px;
                     height: 250px;
                     background-color: #F5F5F5;
+
                     .img-1-1 {
                         position: absolute;
                         margin-left: 40px;
                     }
-    
+
                     .img-1-2 {
                         position: absolute;
                         margin-left: 225px;
                         margin-top: 10px;
                     }
-    
+
                     .btn-1-1 {
                         width: 55px;
                         height: 26px;
@@ -289,12 +294,12 @@
                         font-size: 12px;
                         color: #FaFaFa;
                     }
-    
+
                     h4 {
                         font-size: 16px;
                         font-weight: 500;
                     }
-    
+
                     .btn-wishlist {
                         width: 270px;
                         height: 41px;
@@ -307,59 +312,73 @@
                     }
                 }
             }
+
             .wishlist__items-down__item__info {
                 h4 {
                     font-size: 16px;
                     font-weight: 500;
                 }
-    
+
                 h5 {
                     font-size: 16px;
                     font-weight: 500;
                     color: #db4444;
-    
+
                     span {
                         font-size: 16px;
                         font-weight: 500;
                         color: gray;
                     }
                 }
-                 .wishlist__items-down__item__info {
+
+                .wishlist__items-down__item__info {
                     h4 {
                         font-size: 16px;
                         font-weight: 500;
                     }
-        
+
                     h5 {
                         font-size: 16px;
                         font-weight: 500;
                         color: #db4444;
-        
+
                         span {
                             font-size: 16px;
                             font-weight: 500;
                             color: gray;
                         }
                     }
-                   
+
                 }
+
                 .star-info {
                     display: flex;
                     gap: 8px;
                     width: 150px;
                     height: 20px;
+
                     img {
                         width: 15px;
                         height: 15px;
                     }
+
                     h4 {
                         font-size: 14px;
                         font-weight: 600;
                         color: gray;
                     }
-                   
+
                 }
             }
         }
+    }
+}
+
+.wish {
+    display: flex;
+    .wishlist-items {
+       display: flex;
+       gap: 20px;
+       text-align: center;
     }
 }

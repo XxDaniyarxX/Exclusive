@@ -7,6 +7,7 @@ import smartphoneReducer from './Smartphones/SmartphoneSlice';
 import Category from './Category/Category'
 import HomeFetch from './HomeProduct/HomeProduct';
 import ProductReducer from './Products/ProductSlice'
+import WishlistReducer from './Wish/WishSlice';
 const myStore = configureStore({
     reducer: {
         check: CountReducer,
@@ -16,7 +17,8 @@ const myStore = configureStore({
         smartphone: smartphoneReducer,
         Categorylist: Category,
         HomeFetch: HomeFetch,
-        products: ProductReducer
+        products: ProductReducer,
+        wishlist: WishlistReducer
         
     },
 });

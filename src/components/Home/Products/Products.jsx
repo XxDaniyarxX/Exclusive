@@ -17,7 +17,7 @@ export default function Products() {
         dispath
     ])
     console.log(categories);
-    
+
 
 
     return (
