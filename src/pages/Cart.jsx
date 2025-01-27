@@ -23,10 +23,13 @@ export default function Cart() {
                     <li>Subtotal</li>
                 </ul>
 
-                <div style={{display: 'flex', gap: '20px'}}>
+                <div style={{display: 'flex', gap: '30px'}}>
                     {cartItems.map((item) => (
-                        <nav key={item.id} style={{display: 'flex'}}>
-                                <img width={180} src={item.thumbnail} alt=""/>
+                        <nav key={item.id}>
+                               <div style={{width: '270px', height: '250px', backgroundColor: 'rgb(228, 228, 228)', textAlign: 'center', paddingTop: '15px'}}>
+                                   <img width={180} src={item.thumbnail} alt=""/>
+                               </div>
+                             <h4 style={{fontSize: '16px', fontWeight: 'normal'}}>{item.title}</h4>
                         </nav>
                     ))}
                 </div>
