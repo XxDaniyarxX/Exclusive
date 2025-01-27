@@ -1,8 +1,8 @@
 
-function BlackButton() {
+function BlackButton({ onAddToCart }) {
   return (
     <div>
-       <button className="adding">
+       <button className="adding" onClick={onAddToCart}>
           Add To Cart
         </button>
     </div>

@@ -8,6 +8,7 @@ import Category from './Category/Category'
 import HomeFetch from './HomeProduct/HomeProduct';
 import ProductReducer from './Products/ProductSlice'
 import WishlistReducer from './Wish/WishSlice';
+import basketReducer from './Basket/BasketSlice'
 const myStore = configureStore({
     reducer: {
         check: CountReducer,
@@ -18,7 +19,8 @@ const myStore = configureStore({
         Categorylist: Category,
         HomeFetch: HomeFetch,
         products: ProductReducer,
-        wishlist: WishlistReducer
+        wishlist: WishlistReducer,
+        basket: basketReducer,
         
     },
 });

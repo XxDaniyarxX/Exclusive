@@ -9,10 +9,15 @@ const wishSlice = createSlice({
     },
     removeWish: (state, action) => {
       return state.filter(product => product.id !== action.payload.id);
+    },
+
+    deleteWish: (state, action) => {
+      state.items = state.filter((x) => x.id !== action.payload.id);
     }
   }
+
 });
 
-export const { addWish, removeWish } = wishSlice.actions;
+export const { addWish, removeWish, deleteWish } = wishSlice.actions;
 
 export default wishSlice.reducer;

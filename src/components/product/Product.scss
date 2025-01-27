@@ -1,4 +1,4 @@
-.product{
+.product {
   width: 270px;
   height: 399px;
   position: relative;
@@ -7,34 +7,36 @@
   justify-content: left;
   gap: 10px;
 
-  .product-container{
+  .product-container {
     width: 270px;
     height: 250px;
-    .image{
+
+    .image {
       width: 270px;
       height: 250px;
       background-color: rgb(228, 228, 228);
       padding: 20px;
       padding: 49px;
 
-      img{
+      img {
         width: 180px;
         height: 160px;
         object-fit: contain;
       }
     }
-    .adding{
+
+    .adding {
       display: none;
     }
   }
 
-  .product-container:hover{
+  .product-container:hover {
 
-    .image{
+    .image {
       height: 210px;
     }
 
-    .adding{
+    .adding {
       display: block;
       width: 270px;
       padding: 9px;
@@ -50,7 +52,7 @@
     }
   }
 
-  .discount{
+  .discount {
     width: 55px;
     height: 26px;
     padding: 4px 12px 4px 12px;
@@ -68,7 +70,7 @@
     left: 10px;
   }
 
-  .product-box{
+  .product-box {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -76,7 +78,7 @@
     flex-direction: column;
     gap: 10px;
 
-    div{
+    div {
       width: 30px;
       height: 30px;
       border-radius: 50%;
@@ -84,10 +86,19 @@
       display: flex;
       align-items: center;
       justify-content: center;
+
+      .icon {
+        cursor: pointer;
+        transition: color 0.3s;
+      }
+
+      .icon.added {
+        color: red;
+      }
     }
   }
 
-  h3{
+  h3 {
     color: rgb(0, 0, 0);
     font-family: Poppins;
     font-size: 16px;
@@ -97,13 +108,13 @@
     text-align: left;
   }
 
-  p{
+  p {
     display: flex;
     justify-content: space-between;
     margin: 0px;
 
 
-    .d-price{
+    .d-price {
       color: rgb(219, 68, 68);
       font-family: Poppins;
       font-size: 16px;
@@ -114,7 +125,7 @@
       margin: 0;
     }
 
-    .price{
+    .price {
       color: rgb(0, 0, 0);
       font-family: Poppins;
       font-size: 16px;
@@ -128,18 +139,18 @@
     }
   }
 
-  .rating{
+  .rating {
     display: flex;
     gap: 10px;
     align-items: center;
 
-    .stars{
+    .stars {
       display: flex;
       justify-content: space-between;
       width: 120px;
     }
 
-    span{
+    span {
       color: rgb(0, 0, 0);
       font-family: Poppins;
       font-size: 14px;
