@@ -23,7 +23,7 @@ export default function Cart() {
                     <li>Subtotal</li>
                 </ul>
 
-                <div style={{display: 'flex', gap: '30px'}}>
+                <div style={{display: 'flex', gap: '30px', width: '1170px', flexWrap: 'wrap'}}>
                     {cartItems.map((item) => (
                         <nav key={item.id}>
                                <div style={{width: '270px', height: '250px', backgroundColor: 'rgb(228, 228, 228)', textAlign: 'center', paddingTop: '15px'}}>
